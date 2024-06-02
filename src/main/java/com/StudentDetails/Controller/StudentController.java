@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -61,7 +62,7 @@ public class StudentController {
 	//deleting data
 	
 	@DeleteMapping("/removingData")
-	public String deleteData(@RequestParam("id")Long id) {
+	public String deleteData(@RequestParam("stid")Long id) {
 		
 		
 	   this.service.removedata(id);
@@ -72,8 +73,8 @@ public class StudentController {
 	
 	//updating data
 	
-	@PostMapping("/updateData")
-	public String updateData(@RequestBody Student std) {
+	@PutMapping("/updateData")
+	public String updateStudent(@RequestBody Student std) {
 	   this.service.updateStudent(std);
 		return "updated in database";
 	}

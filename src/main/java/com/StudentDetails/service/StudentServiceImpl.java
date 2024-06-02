@@ -18,7 +18,7 @@ public class StudentServiceImpl {
 	@Autowired
 	private StudentRepostiory repo;
 	
-	//saving data
+	//inserting data
 	
 	public Student saveStudent(Student std) {
 		Student save = this.repo.save(std);
@@ -30,8 +30,8 @@ public class StudentServiceImpl {
 	
 	public List<Student> getData() {
 		
-		List<Student> findStudnetData = this.repo.findAll();
-		return findStudnetData;
+		List<Student> findStudentData = this.repo.findAll();
+		return findStudentData;
 	}
 	
 	
