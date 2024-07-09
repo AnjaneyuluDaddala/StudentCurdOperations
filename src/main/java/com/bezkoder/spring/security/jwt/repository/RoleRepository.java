@@ -9,6 +9,6 @@ import com.bezkoder.spring.security.jwt.models.ERole;
 import com.bezkoder.spring.security.jwt.models.Role;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Long> {
+public interface RoleRepository extends JpaRepository<Role, Integer> {
   Optional<Role> findByName(ERole name);
 }
