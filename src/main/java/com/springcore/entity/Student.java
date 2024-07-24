@@ -13,13 +13,13 @@ public class Student {
 	
 	@Id
 	@Column(name="studentid",length=45)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@Column(name="stdName",length=223)
 	private String stdName;
 	
-	@Column(name="email",length=223)
+	@Column(name="email",length=223,unique = true)
 	private String email;
 	
 	@Column(name="password",length=223)
