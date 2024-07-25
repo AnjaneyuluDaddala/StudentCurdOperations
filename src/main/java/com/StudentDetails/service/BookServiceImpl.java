@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.StudentDetails.Entity.Book;
 
 @Service
+@Primary
 public class BookServiceImpl implements BookService{
 
 	@Override
